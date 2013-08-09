@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="@drawable/stars">
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/bombButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:contentDescription="@string/content_desc_bomb"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/attackbomb" />
+
+        <ImageButton
+            android:id="@+id/invadeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:contentDescription="@string/content_desc_invade"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/attackinvade" />
+
+        <ImageButton
+            android:id="@+id/infectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:contentDescription="@string/content_desc_virus"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/attackvirus" />
+
+        <ImageButton
+            android:id="@+id/laserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:contentDescription="@string/content_desc_laser"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/attacklaser" />
+
+        <ImageButton
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:contentDescription="@string/content_desc_exit"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/attackexit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attack_planet_caption"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/attack_planet_bomb"
+            android:textColor="#FFFF88"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/attack_planet_invade"
+            android:textColor="#FFDD88"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/attack_planet_infect"
+            android:textColor="#FF8888"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/attack_planet_laser"
+            android:textColor="#DD88FF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/attack_planet_exit"
+            android:textColor="#8888FF"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>
