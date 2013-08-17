@@ -19,7 +19,7 @@
             android:background="#000000"
             android:contentDescription="@string/content_desc_bomb"
             android:soundEffectsEnabled="true"
-            android:src="@drawable/attackbomb" />
+            android:src="@drawable/attack_bomb" />
 
         <ImageButton
             android:id="@+id/invadeButton"
@@ -29,7 +29,7 @@
             android:background="#000000"
             android:contentDescription="@string/content_desc_invade"
             android:soundEffectsEnabled="true"
-            android:src="@drawable/attackinvade" />
+            android:src="@drawable/attack_invade" />
 
         <ImageButton
             android:id="@+id/infectButton"
@@ -39,7 +39,7 @@
             android:background="#000000"
             android:contentDescription="@string/content_desc_virus"
             android:soundEffectsEnabled="true"
-            android:src="@drawable/attackvirus" />
+            android:src="@drawable/attack_virus" />
 
         <ImageButton
             android:id="@+id/laserButton"
@@ -49,7 +49,7 @@
             android:background="#000000"
             android:contentDescription="@string/content_desc_laser"
             android:soundEffectsEnabled="true"
-            android:src="@drawable/attacklaser" />
+            android:src="@drawable/attack_laser" />
 
         <ImageButton
             android:id="@+id/exitButton"
