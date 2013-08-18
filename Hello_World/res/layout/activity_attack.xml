@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" 
-    android:background="@drawable/stars">
+    android:background="@drawable/stars"
+    android:orientation="horizontal" >
 
     <LinearLayout
         android:layout_width="70dp"
@@ -21,14 +21,22 @@
             android:soundEffectsEnabled="true"
             android:src="@drawable/attack_bomb" />
 
+        <ImageView
+            android:id="@+id/invadeEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/anim_effect_beam"
+            android:contentDescription="@string/content_desc_invade" />
+
         <ImageButton
             android:id="@+id/invadeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="#000000"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="-54dp"
+            android:background="#00000000"
             android:contentDescription="@string/content_desc_invade"
-            android:soundEffectsEnabled="true"
             android:src="@drawable/attack_invade" />
 
         <ImageButton
@@ -45,7 +53,8 @@
             android:id="@+id/laserButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
             android:background="#000000"
             android:contentDescription="@string/content_desc_laser"
             android:soundEffectsEnabled="true"
