@@ -2,9 +2,11 @@ package chapter.two.hello_world;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -15,6 +17,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		setStartUpWorldValues();
 		setStartUpScreenText();
+		setStartUpScreenAnim();
+	}
+	private void setStartUpScreenAnim() {
+		ImageView homePlanet = (ImageView)findViewById(R.id.imageEarth);
+		AnimationDrawable forceFieldAnimation = (AnimationDrawable) homePlanet.getBackground();
+		forceFieldAnimation.start();
 	}
 	public void setStartUpWorldValues() {
 		earth.setPlanetColonies(1);

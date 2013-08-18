@@ -1,11 +1,13 @@
 package chapter.two.hello_world;
 
 import android.app.Activity;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class NewPlanet extends Activity {
@@ -14,16 +16,10 @@ public class NewPlanet extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add);
-		ImageView marsImage = (ImageView)findViewById(R.id.imageMars);
-		marsImage.setOnClickListener(new View.OnClickListener(){
-			@Override
-			public void onClick(View v){
-				WorldGen mars = new WorldGen("Mars", 642, 3.7);
-				mars.setPlanetColonies(1);
-				Toast myToast = Toast.makeText(NewPlanet.this, "Mars Created", Toast.LENGTH_SHORT);
-				myToast.show();
-			}
-		});
+		
+		final TransitionDrawable trans = (TransitionDrawable) getResources().getDrawable(R.drawable.tran_stars_galaxy);
+		RelativeLayout newPlanetScreen = (RelativeLayout)findViewById(R.id.new_planet_screen);
+		newPlanetScreen.setBackground(trans);
 		
 		Button doneButton = (Button)findViewById(R.id.doneAddingButton);
 		doneButton.setOnClickListener(new View.OnClickListener(){
@@ -31,7 +27,19 @@ public class NewPlanet extends Activity {
 			public void onClick(View v){
 				finish();
 			}
+		});	
+		ImageView marsImage = (ImageView)findViewById(R.id.imageMars);
+		marsImage.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v){
+				WorldGen mars = new WorldGen("Mars", 642, 3.7);
+				mars.setPlanetColonies(1);
+				Toast.makeText(NewPlanet.this, "Mars Created", Toast.LENGTH_SHORT).show();
+				trans.startTransition(5000);
+			}
 		});
+
+
 	}
 	public boolean onKeyDown(int keyCode, KeyEvent event){
 		if(keyCode == KeyEvent.KEYCODE_X) {

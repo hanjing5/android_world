@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_pressed="true" android:drawable="@drawable/attackviruspress" />
     <item android:state_focused="true" android:drawable="@drawable/attackvirusfocus" />
-    <item android:drawable="@drawable/attackvirus" />
+    <item android:drawable="@drawable/anim_virus" />
 
 </selector>

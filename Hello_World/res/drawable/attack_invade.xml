@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_pressed="true" android:drawable="@drawable/attackinvadepress" />
     <item android:state_focused="true" android:drawable="@drawable/attackinvadefocus" />
-    <item android:drawable="@drawable/attackinvade" />
+    <item android:drawable="@drawable/attackinvade" android:state_enabled="true"/>
 
 </selector>
