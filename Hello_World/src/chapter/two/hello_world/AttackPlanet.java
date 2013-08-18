@@ -1,6 +1,7 @@
 package chapter.two.hello_world;
 
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class AttackPlanet extends Activity {
@@ -26,6 +28,9 @@ public class AttackPlanet extends Activity {
 				Toast.makeText(AttackPlanet.this, "Bombs Away!", Toast.LENGTH_SHORT).show();
 			}
 		});
+		ImageView invadeEffect = (ImageView)findViewById(R.id.invadeEffect);
+		AnimationDrawable transporterEffect = (AnimationDrawable)invadeEffect.getBackground();
+		transporterEffect.start();
 		ImageButton invadeButton = (ImageButton)findViewById(R.id.invadeButton);
 		Animation alphaInvade = AnimationUtils.loadAnimation(this, R.anim.anim_alpha_invade);
 		invadeButton.startAnimation(alphaInvade);
@@ -45,7 +50,10 @@ public class AttackPlanet extends Activity {
 		});
 		Animation scaleVirus = AnimationUtils.loadAnimation(this, R.anim.anim_scale_virus);
 		infectButton.startAnimation(scaleVirus);
+		
 		ImageButton laserButton = (ImageButton)findViewById(R.id.laserButton);
+		Animation translateLaser = AnimationUtils.loadAnimation(this, R.anim.anim_trans_laser);
+		laserButton.startAnimation(translateLaser);
 		laserButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {

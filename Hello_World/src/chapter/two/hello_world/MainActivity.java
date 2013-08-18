@@ -2,10 +2,11 @@ package chapter.two.hello_world;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,9 +21,12 @@ public class MainActivity extends Activity {
 		setStartUpScreenAnim();
 	}
 	private void setStartUpScreenAnim() {
-		ImageView homePlanet = (ImageView)findViewById(R.id.imageEarth);
-		AnimationDrawable forceFieldAnimation = (AnimationDrawable) homePlanet.getBackground();
-		forceFieldAnimation.start();
+		//ImageView homePlanet = (ImageView)findViewById(R.id.imageEarth);
+		//AnimationDrawable forceFieldAnimation = (AnimationDrawable) homePlanet.getBackground();
+		//forceFieldAnimation.start();
+		ImageView effectPlanet=(ImageView)findViewById(R.id.planetEffect);
+		Animation animSetRing = AnimationUtils.loadAnimation(this, R.anim.anim_set_ring);
+		effectPlanet.startAnimation(animSetRing);
 	}
 	public void setStartUpWorldValues() {
 		earth.setPlanetColonies(1);
@@ -64,7 +68,6 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()) {
 		case R.id.menu_add:
