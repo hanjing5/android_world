@@ -48,5 +48,6 @@
     <string name="content_desc_virus">Infect the Planet with Virus</string>
     <string name="content_desc_laser">Fire Laser at Planet</string>
     <string name="content_desc_exit">Exit to Home Planet</string>
+    <string name="travel_button_caption">Return to Home Screen</string>
 
 </resources>
