@@ -2,6 +2,7 @@ package chapter.two.hello_world;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,12 @@ public class MainActivity extends Activity {
 		setStartUpWorldValues();
 		setStartUpScreenText();
 		setStartUpScreenAnim();
+		setStartUpScreenAudio();
+	}
+	private void setStartUpScreenAudio() {
+		MediaPlayer audioPlayer =  MediaPlayer.create(getApplicationContext(), R.raw.ambient);
+		audioPlayer.setLooping(true);
+		audioPlayer.start();
 	}
 	private void setStartUpScreenAnim() {
 		//ImageView homePlanet = (ImageView)findViewById(R.id.imageEarth);
